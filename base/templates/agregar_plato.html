@@ -1,0 +1,27 @@
+{%extends 'base.html' %}
+
+{%block titulo%}
+<h1>agregar un nuevo plato</h1>
+{%endblock%}
+
+{% block contenido %}
+{% if form%}
+    <form method="POST">
+        {% csrf_token %}
+        <table>
+            {{form.as_table}}
+        </table>
+        <input type="submit", value="Enviar">
+    </form>
+{%  elif new_plato %}
+    <div class="card" style="width: 18rem;">
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title"> {{new_plato.name}} </h5>
+            <p class="card-text"> {{new_plato.description}} </p>
+            <p class="card-text"> {{new_plato.price}} </p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+    </div>
+{%endif%}
+{%endblock%}

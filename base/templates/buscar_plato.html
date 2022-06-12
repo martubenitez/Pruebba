@@ -1,0 +1,21 @@
+{%extends 'base.html' %}
+
+{% block titulo%}
+Buscar plato
+{%endblock%}
+
+{%block title%} <title>resultado búsqueda</title> {%endblock%}
+
+{% block contenido%}
+{%for plato in platos%}
+    <div class="card" style="width: 18rem;">
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+        <h5 class="card-title"> {{plato.name}} </h5>
+        <p class="card-text"> {{plato.description}} </p>
+        <p class="card-text"> {{plato.price}} </p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+    </div>
+{%endfor%}
+{%endblock%}

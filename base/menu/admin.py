@@ -1,6 +1,6 @@
 from django.contrib import admin
 
 # Register your models here.
-from menu.models import plato
+from menu.models import Plato
 
-admin.site.register(plato)
+admin.site.register(Plato)
