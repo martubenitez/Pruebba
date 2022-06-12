@@ -20,7 +20,7 @@ from base.views import index
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path("", index, name="index" ),
+    path('', index, name="index" ),
     path ('menú/', include('menu.urls'))
     
 ]
